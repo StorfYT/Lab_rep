@@ -26,7 +26,7 @@ int main() {
 	setlocale(LC_ALL, "RUS");
 	Mish num1 = { 150,"bloody","chine" };
 	Mish* ptr = &num1;
-	cout << "��� ������:" << ptr->ves << endl << "����� �������������:" << ptr->firma << endl << "������ ������:" << ptr->ind << endl;
+	cout << "вес товара:" << ptr->ves << endl << "фирма производителя:" << ptr->firma << endl << "индекс товара:" << ptr->ind << endl;
 	Mish* m = new Mish[3];
 	m[0] = { 150,"bloody","238556" };
 	m[1] = { 200,"bloody","745656" };
@@ -50,16 +50,16 @@ int main() {
 	}
 	infmish.close();
 
-	cout << "\n �������:" << endl;
-	cout << "|" << setw(5) << "���"<< "|" << "�����"<<"|"<< "������" << endl;
+	cout << "\n таблица:" << endl;
+	cout << "|" << setw(5) << "вес"<< "|" << "фирма"<<"|"<< "индекс" << endl;
 	for (const auto& it : MishVector) {
 		cout << "|" << setw(5) << it.ves << "|" << setw(15) << it.firma << "|" << setw(15) << it.ind << "|" << endl;
 	}
 	stringstream ss;
 	for (const auto& it : MishVector) {
-		ss << "���-" << it.ves << endl;
-		ss << "�����-" << it.firma << endl;
-		ss << "������-" << it.ind << endl;
+		ss << "вес-" << it.ves << endl;
+		ss << "фирма-" << it.firma << endl;
+		ss << "индекс-" << it.ind << endl;
 	}
 	ofstream DoubleMish("Double_Mish.bin", ios::binary);
 	string data = ss.str();
@@ -67,3 +67,11 @@ int main() {
 	DoubleMish.close();
 	return 0;
 }
+
+
+
+
+
+
+
+
